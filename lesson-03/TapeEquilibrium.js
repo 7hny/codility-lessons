@@ -1,3 +1,5 @@
+// https://app.codility.com/demo/results/trainingSZ3636-3TJ/
+
 function solution(A) {
     // write your code in JavaScript (Node.js 8.9.4)
     const arr = A;
