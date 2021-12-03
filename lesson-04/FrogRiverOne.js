@@ -1,6 +1,9 @@
 // 81%
 // https://app.codility.com/demo/results/trainingJP7XFZ-KXT/
 
+// 72%
+// https://app.codility.com/demo/results/trainingSJSED2-8ZP/
+
 function solution(X, A) {
     // write your code in JavaScript (Node.js 8.9.4)
     let occurences = firstOccurence(A, X);
