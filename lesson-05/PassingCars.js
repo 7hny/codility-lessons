@@ -1,5 +1,5 @@
-// 70%
-// https://app.codility.com/demo/results/training4QHKMV-EEW/
+// 100%
+// https://app.codility.com/demo/results/trainingXQS5FG-BW8/
 
 function solution(A) {
     // write your code in JavaScript (Node.js 8.9.4)
