@@ -22,6 +22,7 @@ function solution(N, A) {
         }
 
         if(item == N+1){
+            // store last max couter value
             max = lastMax;
         } 
     }
