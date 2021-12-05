@@ -4,8 +4,9 @@
 function solution(A) {
     let arr = A;
 
-    // instructiona are not entirely clear, but essentially we should get
-    // a sequence of consecutive integers 1 .. N
+    // instructions are not entirely clear, but essentially after sorting the array
+    // we should geta sequence of consecutive integers starting from 1 like 1 or 1,2, or 1,2,3
+    // so eg 1,3,5,7 or 2,3,4,5 is not a valid sequence
     arr.sort((a,b)=> {
         return a-b
     })
