@@ -1,39 +1,25 @@
-// 66%
-// https://app.codility.com/demo/results/training747T2F-VQA/
+// 100%
+// https://app.codility.com/demo/results/trainingDF4C77-GH7/
 
 function solution(A) {
-    // write your code in JavaScript (Node.js 8.9.4)
     let arr = A;
+
+    // instructiona are not entirely clear, but essentially we should get
+    // a sequence of consecutive integers 1 .. N
     arr.sort((a,b)=> {
         return a-b
     })
 
-    let step = arr[1] - arr[0];
+    if(arr[0]!== 1) return 0;
+    if(arr[arr.length-1]!== arr.length) return 0;
 
-    if(arr[arr.length-1] == step*arr.length){
-        return 1
-    } else {
-        return 0;
+    for(let i=1; i<arr.length-1; i++){
+        let curr = arr[i];
+        let prev = arr[i-1];
+        let next = arr[i+1];
+
+        if((prev !== curr-1) || (next !== curr+1)) return 0;
     }
-}
 
-// 58%
-// https://app.codility.com/demo/results/trainingDW7G7J-NPT/
-
-function solution(A) {
-    // write your code in JavaScript (Node.js 8.9.4)
-    let arr = A;
-
-    arr.sort((a,b)=> {
-        return a-b
-    })
-
-    let sum = arr.reduce((acc, a)=>{
-        return acc+a;
-    }, 0)
-
-    let step = arr[1] - arr[0];
-    let calculatedSum = arr.length*(arr.length+step)/2
-
-    return (sum === calculatedSum) ? 1 : 0;
+    return 1;
 }
