@@ -1,5 +1,5 @@
-// 22%
-// https://app.codility.com/demo/results/trainingZ6PP6F-MEC/
+// 77%
+// https://app.codility.com/demo/results/trainingG28SM3-CPW/
 
 function solution(N, A) {
     // write your code in JavaScript (Node.js 8.9.4)
@@ -10,7 +10,7 @@ function solution(N, A) {
 
     //console.log(counter)
 
-    let cursor = 0;
+    let lastMax = 0;
 
     for(let i=0; i<arr.length; i++){
 
@@ -19,22 +19,16 @@ function solution(N, A) {
 
         if(item <= N){
             counter[item] += 1;
+            if(counter[item] > lastMax) lastMax = counter[item];
         }
-        if(item == N+1){
-            counter.fill(counter[cursor]);
-        } else {
-            cursor = arr[i];
-        }
-        //console.log(counter[arr[i-1]])
-        // console.log(counter[arr[i]])
 
-        // console.log(counter)
+        if(item == N+1){
+            counter.fill(lastMax);
+        } 
     }
 
     counter.shift();
     // console.log(counter)
 
-
     return counter;
-
 }
