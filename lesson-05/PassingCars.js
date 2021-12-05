@@ -19,6 +19,8 @@ function solution(A) {
     for(i=0; i<arr.length; i++){
         if(arr[i] == 0){
             result+= last - prefixSums[i];
+            //  return -1 if the number of pairs of passing cars exceeds 1,000,000,000.
+            if(result > 1000000000) return -1;
         }
     }
 
