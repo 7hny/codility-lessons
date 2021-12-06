@@ -3,7 +3,7 @@
 
 function solution(A, B, K) {
     // write your code in JavaScript (Node.js 8.9.4)
-    let start = A+A%K;
+    let start = (A%K == 0) ? A : A+(K-A%K);
     let end = B-B%K;
 
     if(K>B) return 0;
@@ -11,5 +11,9 @@ function solution(A, B, K) {
 
     let result = (end - start)/K+1
 
-    return Math.trunc(result);
+    //console.log(start)
+    //console.log(A%K)
+    //console.log(end) 
+    //console.log(result)
+    return result;
 }
