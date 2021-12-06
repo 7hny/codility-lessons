@@ -1,5 +1,5 @@
-// 62%
-// https://app.codility.com/demo/results/trainingCQJ2G7-ZC5/
+// 75%
+// https://app.codility.com/demo/results/trainingRWXTU7-MRZ/
 
 function solution(A, B, K) {
     // write your code in JavaScript (Node.js 8.9.4)
@@ -11,8 +11,5 @@ function solution(A, B, K) {
 
     let result = (end - start)/K+1
 
-    // console.log(start)
-    // console.log(end) 
-    //console.log(result)
     return Math.trunc(result);
 }
