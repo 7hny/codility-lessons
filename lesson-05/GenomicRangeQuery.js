@@ -1,16 +1,26 @@
-// 66%
-// https://app.codility.com/demo/results/trainingJZ8XQT-KF3/
+// 75%
+// https://app.codility.com/demo/results/training38RJVD-PQH/
 
 function solution(S, P, Q) {
     // write your code in JavaScript (Node.js 8.9.4)
     let M = P.length;
     let str = S;
-    // let genes = {
-    //     "A":1,
-    //     "C":2,
-    //     "G":3,
-    //     "T":4,
-    // }
+
+    const geneMap = new Map()
+    geneMap.set('A', 1);
+    geneMap.set('C', 2);
+    geneMap.set('G', 3);
+    geneMap.set('T', 4);
+
+    let g = {
+        "A":1,
+        "C":2,
+        "G":3,
+        "T":4,
+    }
+
+    // single character string, return impact factor of first and only gene
+    if(M == 1) return [geneMap.get(S[0])];
 
     // CAGCCTA
 
@@ -54,6 +64,11 @@ function solution(S, P, Q) {
         let end = Q[i];
         let offset = 0;
 
+        if(start == 0){
+            // eg. two characters
+            // console.log(genes["A"][start - 1])
+        }
+
         if(start == end){
             offset = 1;
         }
@@ -83,3 +98,7 @@ function solution(S, P, Q) {
     // console.log(result);
     return result;
 }
+
+// ('A', [0], [0])
+// ('CAGCCTA', [0, 2, 5, 0], [0, 4, 5, 6])
+// ('CA', [0, 0, 1], [0, 1, 1])
