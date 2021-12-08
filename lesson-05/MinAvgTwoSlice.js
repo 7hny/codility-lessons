@@ -1,12 +1,13 @@
-// 90%
-// https://app.codility.com/demo/results/trainingW8PMY7-GR2/
+// 100%
+// https://app.codility.com/demo/results/trainingXY7656-Q42/
 
 function solution(A) {
     // write your code in JavaScript (Node.js 8.9.4)
 
     let arr = A;
     let minAvg = null;
-    let pos = arr.length;
+    // default pos 0 handles two element input array A
+    let pos = 0;
 
     // we are looking for 2 or 3 element slices
     // this objective is not given in task description
