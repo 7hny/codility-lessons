@@ -1,12 +1,9 @@
-// 44%
-// https://app.codility.com/demo/results/training8KE792-6M9/
+// 100%
+// https://app.codility.com/demo/results/training6KRS73-4J7/
 
 function solution(A) {
     let arr = A;
-    arr.sort();
-    //A.sort((a, b) => (a - b));
-
-    // console.log(arr)
+    A.sort((a, b) => (a - b));
 
     let result1 = arr[arr.length-3] * arr[arr.length-2] * arr[arr.length-1];
     let result2 = arr[0] * arr[1] * arr [arr.length-1];
