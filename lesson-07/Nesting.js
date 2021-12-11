@@ -1,35 +1,26 @@
-// 87%
-// https://app.codility.com/demo/results/training7HWR9W-2EU/
+// 100%
+// https://app.codility.com/demo/results/trainingSJV5QT-B3U/
 
 function solution(S) {
     // write your code in JavaScript (Node.js 8.9.4)
-    let arr = Array.from(S);
-    let stack = [];
-    let n = arr.length;
+    let stack = 0;
 
-    if(n%2 !== 0) return 0;
+    for (const c of S) {
 
-    let numOpen = 0;
-    let numClose = 0;
-
-    for(i=0; i<n; i++){
-        let char = arr[i];
-
-        if(char == "("){
-            stack.push(char);
-            numOpen ++;
+        if(c == "("){
+            stack ++;
         } else{
-            if(stack.pop()){
-                numClose++;
+            if(stack>0){
+               stack --
             } else{
                 return 0
             }
         }
     }
 
-    if(numOpen == numClose){
+    if(stack == 0){
         return 1
-    }else {
+    } else {
         return 0;
     }
 }
