@@ -33,3 +33,7 @@ function solution(S) {
         return (openChar == "{" && closeChar == "}") || (openChar == "(" && closeChar == ")") || (openChar == "[" && closeChar == "]");
     }
 }
+
+// TEST
+'{{{{'
+'}}}}'
