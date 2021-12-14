@@ -1,5 +1,5 @@
-// 73%
-// https://app.codility.com/demo/results/training953F79-MG3/
+// 80%
+// https://app.codility.com/demo/results/trainingQ33FXD-SY2/
 
 function solution(A) {
     // write your code in JavaScript (Node.js 8.9.4)
@@ -29,9 +29,9 @@ function solution(A) {
         flags = 1;
         // check the distance between flags
         // and count them to see if we can fit them onto available peaks
-        for(i=0; i<peaks.length; i++){
-            if(peaks[i] - lastFlag >= k && flags < k){
-                lastFlag = peaks[i]
+        for(i=1; i<peaks.length; i++){
+            if(peaks[i] - peaks[lastFlag] >= k && flags < k){
+                lastFlag = i
                 flags++;
             }
         }
